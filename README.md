@@ -1,4 +1,3 @@
-```markdown
 # ⚡ Projet AD2 #07 — Prévision de la Consommation Électrique au Cameroun (ENEO)
 
 **École Nationale Supérieure Polytechnique de Douala**  
