@@ -1,13 +1,13 @@
-# ⚡ Projet AD2 #07 — Prévision de la Consommation Électrique au Cameroun (ENEO)
+# Projet AD2 #07 — Prévision de la Consommation Électrique au Cameroun (ENEO)
 
 **École Nationale Supérieure Polytechnique de Douala**  
-Département Informatique — Filière SDIA  
+Département Informatique - Filière SDIA  
 Année académique 2025/2026  
 Enseignant : M. FOTSO Valdez
 
 ---
 
-## 📌 Description
+## Description
 
 Ce projet a pour objectif de construire un pipeline complet d’analyse et de prévision de la consommation électrique à partir de **données synthétiques réalistes** construites sur des statistiques de l’Agence Internationale de l’Énergie (IEA).
 
@@ -25,15 +25,14 @@ L'ensemble du projet est consigné dans **un seul notebook Jupyter**, exécuté 
 
 ---
 
-## 🗂️ Structure du dépôt
+## Structure du dépôt
 
 ```
 projet07_consommation/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── notebooks/
-│   └── projet07_final.ipynb          # Notebook Jupyter complet
+├── projet07_ENEO_complet.ipynb          # Notebook Jupyter complet
 ├── images/                           # Graphiques générés par le notebook
 │   ├── eda_multiscale.png
 │   ├── eda_boxplot_heatmap.png
@@ -53,15 +52,12 @@ projet07_consommation/
 │   ├── sarima_diagnostics.png
 │   ├── sarima_prevision_7j.png
 │   └── rapport_risques_surcharge.png
-├── presentation/
-│   └── site.html                     # Site vitrine interactif (dashboard)
-└── rapport/
-    └── rapport_projet07.pdf          # Rapport imprimable
+├── eneo_presentation.html/           # Site vitrine interactif (dashboard)         
 ```
 
 ---
 
-## 🛠️ Installation & utilisation
+## Installation & utilisation
 
 ### 1. Cloner le dépôt
 ```bash
@@ -90,7 +86,7 @@ Exécutez toutes les cellules dans l’ordre (`Kernel → Restart & Run All`).
 
 ---
 
-## 📊 Données
+## Données
 
 - **Source** : IEA Monthly Electricity Statistics (`MES_0126.csv`)  
 - **Période** : janvier 2010 – janvier 2026  
@@ -99,7 +95,7 @@ Exécutez toutes les cellules dans l’ordre (`Kernel → Restart & Run All`).
 
 ---
 
-## 🧠 Méthodes & algorithmes
+## Méthodes & algorithmes
 
 | Étape             | Technique / Modèle                              |
 |-------------------|--------------------------------------------------|
@@ -110,7 +106,7 @@ Exécutez toutes les cellules dans l’ordre (`Kernel → Restart & Run All`).
 
 ---
 
-## 📈 Résultats clés
+## Résultats clés
 
 - **4 profils de consommation** identifiés : critique (780 MW), forte, normale, basse  
 - **Random Forest** : F1 = 0.788 (critique), variable la plus importante = `hour`  
@@ -119,7 +115,7 @@ Exécutez toutes les cellules dans l’ordre (`Kernel → Restart & Run All`).
 
 ---
 
-## 🌐 Site vitrine (Dashboard)
+## Site vitrine (Dashboard)
 
 Un **site statique HTML/CSS/JS** est fourni dans le dossier `presentation/`. Il permet de visualiser les résultats sans PowerPoint et inclut une zone secrète de **questions de soutenance** (double‑clic sur l’onglet « Livrables »).
 
@@ -139,7 +135,7 @@ Ouvrez simplement `presentation/site.html` dans un navigateur.
 
 ---
 
-## 📄 Licence & remerciements
+## Licence & remerciements
 
 Projet réalisé dans le cadre du cours **Analyse de Données 2** de l’ENSPD.  
 Merci à M. FOTSO Valdez pour l’encadrement.
