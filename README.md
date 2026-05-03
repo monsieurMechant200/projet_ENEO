@@ -61,7 +61,7 @@ projet07_consommation/
 
 ### 1. Cloner le dépôt
 ```bash
-git clone [<url-du-depot>](https://github.com/monsieurMechant200/projet_ENEO)
+git clone https://github.com/monsieurMechant200/projet_ENEO
 cd projet07_consommation
 ```
 
