@@ -13,12 +13,12 @@ Ce projet a pour objectif de construire un pipeline complet d’analyse et de pr
 
 La chaîne méthodologique suit les exigences de la Bible du projet **AD2 #07** et couvre :
 
-1. **Analyse Exploratoire (EDA)** – visualisations multi‑échelles, boxplots, heatmaps  
-2. **Prétraitement** – interpolation des valeurs manquantes, gestion des outliers (IQR), standardisation  
+1. **Analyse Exploratoire (EDA)** - visualisations multi‑échelles, boxplots, heatmaps  
+2. **Prétraitement** - interpolation des valeurs manquantes, gestion des outliers (IQR), standardisation  
 3. **ACP** – réduction dimensionnelle (95 % de variance expliquée)  
-4. **Clustering** – K‑Means (k=4) pour le profilage des journées, DBSCAN pour la détection d’anomalies  
-5. **Classification supervisée** – Arbre de décision & Random Forest pour identifier les heures critiques  
-6. **Séries temporelles** – Décomposition saisonnière, test ADF, ACF/PACF, **SARIMA** avec prévision à 7 jours et intervalles de confiance 95 %  
+4. **Clustering** - K‑Means (k=4) pour le profilage des journées, DBSCAN pour la détection d’anomalies  
+5. **Classification supervisée** - Arbre de décision & Random Forest pour identifier les heures critiques  
+6. **Séries temporelles** - Décomposition saisonnière, test ADF, ACF/PACF, **SARIMA** avec prévision à 7 jours et intervalles de confiance 95 %  
 7. **Rapport de risques de surcharge** – Recommandations opérationnelles pour ENEO  
 
 L'ensemble du projet est consigné dans **un seul notebook Jupyter**, exécuté avec `random_state=42` pour garantir la reproductibilité.
