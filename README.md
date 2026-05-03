@@ -61,7 +61,7 @@ projet07_consommation/
 
 ### 1. Cloner le dépôt
 ```bash
-git clone <url-du-depot>
+git clone [<url-du-depot>](https://github.com/monsieurMechant200/projet_ENEO)
 cd projet07_consommation
 ```
 
@@ -79,10 +79,10 @@ pip install -r requirements.txt
 
 ### 4. Lancer le notebook
 ```bash
-jupyter notebook notebooks/projet07_final.ipynb
+jupyter notebook notebooks/projet07_ENEO_cpmplet.ipynb
 ```
 
-Exécutez toutes les cellules dans l’ordre (`Kernel → Restart & Run All`).
+Exécutez toutes les cellules dans l’ordre (`Kernel -> Restart & Run All`).
 
 ---
 
@@ -119,7 +119,7 @@ Exécutez toutes les cellules dans l’ordre (`Kernel → Restart & Run All`).
 
 Un **site statique HTML/CSS/JS** est fourni dans le dossier `presentation/`. Il permet de visualiser les résultats sans PowerPoint et inclut une zone secrète de **questions de soutenance** (double‑clic sur l’onglet « Livrables »).
 
-Ouvrez simplement `presentation/site.html` dans un navigateur.
+Ouvrez simplement `eneo_presentation/site.html` dans un navigateur.
 
 ---
 
