@@ -130,7 +130,7 @@ Ouvrez simplement `eneo_presentation.html` dans un navigateur.
 | Chef de projet       | AAT Ndongo           |
 | Rapport & EDA        | EVENGUE Philomène    |
 | ACP & Clustering     | HALIMATOU SADIYA     |
-| Classification       | IVANA                |
+| Classification       | IVANA DJEUTCHOU      |
 | SARIMA & Validation  | ETIA PATRICK         |
 
 ---
