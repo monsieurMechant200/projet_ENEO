@@ -1,4 +1,4 @@
-# Projet AD2 #07 - Prévision de la Consommation Électrique au Cameroun (ENEO)
+# Projet AD2 #07 - Prévision de la Consommation Électrique au Cameroun (SOCADEL)
 
 **École Nationale Supérieure Polytechnique de Douala**  
 Département Informatique - Filière SDIA  
