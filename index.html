@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet AD2 #07 · Prévision Consommation ENEO</title>
+    <title>Projet AD2 #07 · Prévision Consommation SOCADEL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -609,7 +609,7 @@
     <div class="brand">
         <div class="brand-icon"><i class="fas fa-bolt"></i></div>
         <div class="brand-text">
-            <h3>ENEO Forecast</h3>
+            <h3>SOCADEL Forecast</h3>
             <span>Projet AD2 #07</span>
         </div>
     </div>
@@ -642,7 +642,7 @@
     <!-- ══════════ DASHBOARD ══════════ -->
     <div id="dashboard" class="panel active">
         <div class="header">
-            <h1>Prévision Consommation Électrique ENEO</h1>
+            <h1>Prévision Consommation Électrique SOCADEL</h1>
             <div class="badge accent"><div class="dot"></div>random_state = 42</div>
         </div>
         <div class="grid3">
@@ -667,7 +667,7 @@
         </div>
         <div class="grid2">
             <div class="card">
-                <div class="card-title"><i class="fas fa-cloud-sun" style="color:var(--accent2);"></i> Profil de charge ENEO</div>
+                <div class="card-title"><i class="fas fa-cloud-sun" style="color:var(--accent2);"></i> Profil de charge SOCADEL</div>
                 <img class="graph-img" src="images/eda_multiscale.png" alt="EDA multi-échelle" onerror="this.style.display='none'">
                 <p style="margin-top:12px;color:var(--text-sub);font-size:0.84rem;">Double pointe africaine (7h-9h & 18h-22h), creux week-end (−12%), saisonnalité sèche/pluies.</p>
             </div>
@@ -680,7 +680,7 @@
         <div class="card">
             <div class="card-title"><i class="fas fa-info-circle" style="color:var(--accent3);"></i> Source des données</div>
             <p style="color:var(--text-sub);font-size:0.85rem;">
-                Dataset <strong>IEA Monthly Electricity Statistics</strong> (données publiques), retraité en série temporelle horaire et enrichi de features synthétiques (profil de charge africain, température Douala, saisonnalité sèche/pluies). Justification validée par l'enseignant - profil similaire au réseau ENEO/SONATREL camerounais.
+                Dataset <strong>IEA Monthly Electricity Statistics</strong> (données publiques), retraité en série temporelle horaire et enrichi de features synthétiques (profil de charge africain, température Douala, saisonnalité sèche/pluies). Justification validée par l'enseignant - profil similaire au réseau SOCADEL/SONATREL camerounais.
             </p>
         </div>
     </div>
@@ -690,7 +690,7 @@
         <div class="header"><h1>EDA - Analyse Exploratoire</h1><div class="badge success"><div class="dot"></div>4 points</div></div>
         <div class="card">
             <div class="card-title"><i class="fas fa-table"></i> Statistiques descriptives</div>
-            <p style="color:var(--text-sub);">Dataset <strong>141 000 heures</strong> (2010–2026). Consommation : 279 - 900 MW. Température simulée Douala : 19 - 42°C. Bruit gaussien ±4%. Aucune valeur manquante après interpolation linéaire.</p>
+            <p style="color:var(--text-sub);">Dataset <strong>141 000 heures</strong> (2010-2026). Consommation : 279 - 900 MW. Température simulée Douala : 19 - 42°C. Bruit gaussien ±4%. Aucune valeur manquante après interpolation linéaire.</p>
         </div>
         <div class="grid2">
             <div class="card"><div class="card-title">Multi‑échelle (mois · semaine · jour)</div><img class="graph-img" src="images/eda_multiscale.png" alt="Multi-échelle"></div>
@@ -699,7 +699,7 @@
         <div class="card"><div class="card-title">Corrélations glissantes</div><img class="graph-img" src="images/eda_rolling_correlations.png" alt="Corrélations"></div>
         <div class="card">
             <div class="card-title">Prétraitement</div>
-            <p style="color:var(--text-sub);">Interpolation linéaire (continuité temporelle) · Seuil IQR ×3 (conservation des pics ENEO) · StandardScaler pour ACP & clustering · MinMaxScaler pour LSTM/RNN · Features temporels : hour, day_of_week, month, is_weekend, lag_24h, lag_168h, roll_24h</p>
+            <p style="color:var(--text-sub);">Interpolation linéaire (continuité temporelle) - Seuil IQR ×3 (conservation des pics ENEO) - StandardScaler pour ACP & clustering - MinMaxScaler pour LSTM/RNN - Features temporels : hour, day_of_week, month, is_weekend, lag_24h, lag_168h, roll_24h</p>
             <img class="graph-img" src="images/preprocessing_outliers.png" alt="Outliers" style="max-height:200px; margin-top:12px;">
         </div>
     </div>
@@ -724,7 +724,7 @@
 
     <!-- ══════════ CLUSTERING ══════════ -->
     <div id="clustering" class="panel">
-        <div class="header"><h1>Clustering – K-Means + DBSCAN</h1><div class="badge success"><div class="dot"></div>4 points</div></div>
+        <div class="header"><h1>Clustering - K-Means + DBSCAN</h1><div class="badge success"><div class="dot"></div>4 points</div></div>
         <div class="grid2">
             <div class="card"><div class="card-title">Méthode du coude & Silhouette</div><img class="graph-img" src="images/kmeans_choix_k.png" alt="Choix k"></div>
             <div class="card"><div class="card-title">Profils K-Means (k=4)</div><img class="graph-img" src="images/kmeans_profils.png" alt="Profils clusters"></div>
@@ -782,19 +782,19 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
         <div class="card">
             <div class="card-title">Réponses aux 4 questions clés</div>
             <p style="color:var(--text-sub); line-height:1.75;">
-                <strong>Q1 - Patterns :</strong> Double pointe journalière (7h-9h & 18h-22h), creux week-end −12%, hausse saison sèche +8% (Nov-Mar).<br>
+                <strong>Q1 - Patterns :</strong> Double pointe journalière (7h-9h & 18h-22h), creux week-end -12%, hausse saison sèche +8% (Nov-Mar).<br>
                 <strong>Q2 - Température :</strong> Corrélation +0.3 ; chaque degré &gt;30°C augmente la conso de 0.8% via climatisation.<br>
                 <strong>Q3 - Prévision :</strong> SARIMA(1,0,0)(1,0,0)[7] donne des prévisions journalières avec IC 95%.<br>
-                <strong>Q4 - Surcharges :</strong> 18h-22h, nov–mars, température &gt;34°C → alerte critique.
+                <strong>Q4 - Surcharges :</strong> 18h-22h, nov–mars, température &gt;34°C -> alerte critique.
             </p>
         </div>
         <div class="card">
             <div class="card-title">Perspectives d'amélioration</div>
             <p style="color:var(--text-sub); line-height:1.75;">
-                · SARIMAX avec température réelle Douala (amélioration MAPE estimée : -3 à -5%)<br>
-                · <strong>Prophet (Meta)</strong> ou <strong>LSTM</strong> : mieux adapté aux multi-saisonnalités<br>
-                · Intégration des jours fériés camerounais et événements sportifs (CAN)<br>
-                · Données réelles ENEO à granularité 15 minutes
+                - SARIMAX avec température réelle Douala (amélioration MAPE estimée : -3 à -5%)<br>
+                - <strong>Prophet (Meta)</strong> ou <strong>LSTM</strong> : mieux adapté aux multi-saisonnalités<br>
+                - Intégration des jours fériés camerounais et événements sportifs (CAN)<br>
+                - Données réelles ENEO à granularité 15 minutes
             </p>
         </div>
     </div>
@@ -806,12 +806,12 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
 
         <!-- Hero banner -->
         <div class="team-hero">
-            <div class="team-hero-eyebrow">ENSPD Douala · Département GIT · SDIA Niv.3</div>
+            <div class="team-hero-eyebrow">ENSPD Douala - Département GIT - SDIA Niv.3</div>
             <div class="team-hero-title">Équipe du<br>Projet AD2 #07</div>
-            <div class="team-hero-sub">ANALYSE DE DONNEES 2 · Prévision Consommation Électrique ENEO · Promotion 2025–2026</div>
+            <div class="team-hero-sub">ANALYSE DE DONNEES 2 · Prévision Consommation Électrique SOCADEL · Promotion 2025 - 2026</div>
             <div class="team-hero-pills">
                 <div class="hero-pill"><i class="fas fa-brain"></i> AD2</div>
-                <div class="hero-pill"><i class="fas fa-bolt"></i> ENEO · Cameroun</div>
+                <div class="hero-pill"><i class="fas fa-bolt"></i> SOCADEL - Cameroun</div>
                 <div class="hero-pill"><i class="fas fa-chart-line"></i> SARIMA · Random Forest</div>
                 <div class="hero-pill"><i class="fas fa-code-branch"></i> GitHub CI</div>
             </div>
@@ -843,7 +843,7 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
                 </div>
                 <div class="member-badge"><i class="fas fa-crown" style="font-size:0.6rem;"></i>&nbsp; Chef de Projet</div>
                 <div class="member-name">AAT Ndongo</div>
-                <div class="member-role">Fullstack · GitHub Admin · Intégration API</div>
+                <div class="member-role">Fullstack - GitHub Admin - Intégration API</div>
                 <div class="member-divider"></div>
                 <ul class="member-contributions">
                     <li>Administration du dépôt GitHub, branching strategy & code reviews</li>
@@ -851,7 +851,7 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
                     <li>Création des pages web (HTML/CSS/JS) </li>
                     <li>Points de synchronisation quotidiens & gestion des livrables</li>
                 </ul>
-                <div class="member-tag"><i class="fas fa-code-branch"></i> GitHub · FastAPI · Fullstack</div>
+                <div class="member-tag"><i class="fas fa-code-branch"></i> GitHub - FastAPI - Fullstack</div>
             </div>
 
             <!-- M2 : EVENGUE Philomène -->
@@ -870,7 +870,7 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
                     <li>Redactions</li>
                     <li>Visualisations</li>
                 </ul>
-                <div class="member-tag"><i class="fas fa-wave-square"></i> Pandas · Matplolib · Seaborn</div>
+                <div class="member-tag"><i class="fas fa-wave-square"></i> Pandas - Matplolib - Seaborn</div>
             </div>
 
             <!-- M3 : HALIMATOU SADIYA -->
@@ -890,7 +890,7 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
                     <li>clustering K-MEANS</li>
                     <li>DBSCAN</li>
                 </ul>
-                <div class="member-tag"><i class="fas fa-server"></i> Pandas · ACP · K-Means</div>
+                <div class="member-tag"><i class="fas fa-server"></i> Pandas - ACP - K-Means</div>
             </div>
 
             <!-- M4 : IVANA -->
@@ -910,7 +910,7 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
                     <li>RandomForest</li>
                     <li>Séparation train/validation/test & analyse de stationnarité (ADF)</li>
                 </ul>
-                <div class="member-tag"><i class="fas fa-chart-bar"></i> SKLEARN · Pandas · Numpy</div>
+                <div class="member-tag"><i class="fas fa-chart-bar"></i> SKLEARN - Pandas - Numpy</div>
             </div>
 
             <!-- M5 : ETIA PATRICK -->
@@ -929,7 +929,7 @@ Random Forest       0.955     0.795            0.791         0.793     0.788±0.
                     <li>prevision sur les 7 prochqins jours et prise de decisions</li>
                     <li>Amelioration et Conclusion</li>
                 </ul>
-                <div class="member-tag"><i class="fas fa-brain"></i> Statmodels · SARIMA · Decision</div>
+                <div class="member-tag"><i class="fas fa-brain"></i> Statmodels - SARIMA - Decision</div>
             </div>
 
         </div>
@@ -989,7 +989,7 @@ acf_pacf.png
 sarima_diagnostics.png
 sarima_prevision_7j.png
 rapport_risques_surcharge.png</pre>
-            <p style="color:var(--text-sub); margin-top:10px;">Notebook Jupyter unique · <code>random_state=42</code> global · Exécution : Kernel → Restart &amp; Run All</p>
+            <p style="color:var(--text-sub); margin-top:10px;">Notebook Jupyter unique - <code>random_state=42</code> global - Exécution : Kernel -> Restart &amp; Run All</p>
         </div>
         
     </div>
@@ -1007,12 +1007,12 @@ rapport_risques_surcharge.png</pre>
             <div class="qa-a">SARIMA = AutoRegressive Integrated Moving Average avec composante Saisonnière. Il capture tendance, autocorrélation et double saisonnalité (journalière + hebdomadaire), ce qui est idéal pour la consommation électrique camerounaise avec ses deux pointes quotidiennes.</div>
         </div>
         <div class="qa-card">
-            <div class="qa-q"><span>Q3.</span> Que feriez-vous différemment avec des données réelles ENEO ?</div>
+            <div class="qa-q"><span>Q3.</span> Que feriez-vous différemment avec des données réelles SOCADEL ?</div>
             <div class="qa-a">Utiliser des relevés réels à 15 minutes (au lieu d'horaire synthétique IEA), ajouter des variables exogènes (température réelle Météo Cameroun, jours fériés, événements CAN), et tester Prophet ou LSTM pour mieux modéliser les multi-saisonnalités. MAPE attendu : amélioration de 3 à 5%.</div>
         </div>
         <div class="qa-card">
             <div class="qa-q"><span>Q4.</span> Pourquoi interpoler et non supprimer les valeurs manquantes ?</div>
-            <div class="qa-a">Supprimer des lignes dans une série temporelle créerait des discontinuités qui faussent la saisonnalité et les modèles ARIMA. L'interpolation linéaire préserve la continuité temporelle — condition essentielle pour la stationnarité et l'autocorrélation.</div>
+            <div class="qa-a">Supprimer des lignes dans une série temporelle créerait des discontinuités qui faussent la saisonnalité et les modèles ARIMA. L'interpolation linéaire préserve la continuité temporelle qui est une condition essentielle pour la stationnarité et l'autocorrélation.</div>
         </div>
         <div class="qa-card">
             <div class="qa-q"><span>Q5.</span> Comment interpréter les axes de l'ACP ?</div>
@@ -1020,7 +1020,7 @@ rapport_risques_surcharge.png</pre>
         </div>
         <div class="qa-card">
             <div class="qa-q"><span>Q6.</span> Pourquoi avoir utilisé l'ACP avant le clustering ?</div>
-            <div class="qa-a">Réduire la dimensionnalité (6 → 5 composantes) tout en conservant 96.5% de la variance évite la "malédiction de la dimension". Cela améliore la stabilité de K-Means (distances euclidiennes plus significatives) et la qualité de DBSCAN.</div>
+            <div class="qa-a">Réduire la dimensionnalité (6 -> 5 composantes) tout en conservant 96.5% de la variance évite la "malédiction de la dimension". Cela améliore la stabilité de K-Means (distances euclidiennes plus significatives) et la qualité de DBSCAN.</div>
         </div>
         <div class="qa-card">
             <div class="qa-q"><span>Q7.</span> Quelle est la différence entre LSTM et SARIMA pour ce projet ?</div>
@@ -1036,7 +1036,7 @@ rapport_risques_surcharge.png</pre>
         const navItems = document.querySelectorAll('.nav-item');
         const html     = document.documentElement;
 
-        /* ── Changement de thème ── */
+        /* -- Changement de thème -- */
         document.querySelectorAll('.theme-dot').forEach(dot => {
             dot.addEventListener('click', () => {
                 html.setAttribute('data-theme', dot.dataset.theme);
@@ -1045,7 +1045,7 @@ rapport_risques_surcharge.png</pre>
             });
         });
 
-        /* ── Navigation ── */
+        /* -- Navigation -- */
         function showPanel(id) {
             panels.forEach(p => p.classList.remove('active'));
             navItems.forEach(n => n.classList.remove('active'));
@@ -1062,7 +1062,7 @@ rapport_risques_surcharge.png</pre>
             });
         });
 
-        /* ── Double-clic sur Livrables → Q&A ── */
+        /* -- Double-clic sur Livrables -> Q&A -- */
         const livrablesNav = document.getElementById('nav-livrables');
         let clickTimer = null;
 
@@ -1079,7 +1079,7 @@ rapport_risques_surcharge.png</pre>
             }
         });
 
-        /* ── Animation des barres de compétences au hover ── */
+        /* -- Animation des barres de compétences au hover -- */
         document.querySelectorAll('.skill-bar-fill').forEach(bar => {
             const w = bar.style.width;
             bar.style.width = '0';
